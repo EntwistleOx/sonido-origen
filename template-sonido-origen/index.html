@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sonido Origen</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
+    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+
+    <style>
+      .hero.is-fullheight {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url(images/hero.jpg);
+
+        height: 500px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .hero.is-medium {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url(images/james-owen-MuIvHRJbjA8-unsplash.jpg);
+
+        height: 500px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #navbar {
+        overflow: hidden;
+      }
+      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+      .sticky + .content {
+        padding-top: 60px;
+      }
+
+      .navbar-transparent {
+        background-color: transparent;
+        background-image: none;
+      }
+
+      #navbar-solid {
+        position: fixed;
+        /* Make it stick/fixed */
+        top: -55px; /* Hide the navbar 50 px outside of the top view */
+        transition: top 0.5s; /* Transition effect when sliding down (and up) */
+      }
+
+      .iframe-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 80px !important;
+      }
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="header" class="hero is-fullheight">
+      <header class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title has-text-white is-1 is-uppercase mb-6">
+            LOGO ORIGEN
+          </h1>
+          <h2 class="subtitle has-text-white is-4 mb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quam
+            eaque placeat nobis iste unde nam laboriosam minus perspiciatis
+            sapiente.
+          </h2>
+          <div class="tabs is-centered">
+            <ul>
+              <li>
+                <a href="contacto.html" class="has-text-light">Hablemos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <section id="navbar">
+      <nav id="navbar-solid" class="navbar-solid navbar is-fixed-top">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            Sonido Origen
+          </a>
+          <div
+            class="navbar-burger burger"
+            data-target="navbarExampleTransparentExample"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start"></div>
+          <div class="navbar-end">
+            <a class="navbar-item" href="index.html">
+              Inicio
+            </a>
+            <a class="navbar-item" href="producciones.html">
+              Producciones
+            </a>
+            <a class="navbar-item" href="ficha-tecnica.html">
+              Ficha Tecnica
+            </a>
+            <a class="navbar-item" href="contacto.html">
+              Contacto
+            </a>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section id="about" class="section is-medium has-background-light">
+      <h2 class="title has-text-centered">Acerca de Mi</h2>
+      <div class="container box">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <figure class="image">
+              <img src="./images/rob-simmons-yYh5hf9atNw-unsplash.jpg" />
+            </figure>
+          </div>
+          <div class="column">
+            <p class="subtitle">
+              Lorem, ipsum dolor.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              explicabo harum eveniet placeat laudantium nulla, ex aliquid
+              commodi delectus natus enim nobis. Explicabo beatae expedita
+              aspernatur iusto illum molestias eos. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Deleniti, tempora sit. Iure nesciunt
+              ut quae molestias aspernatur asperiores. Sunt, neque!
+            </p>
+            <p class="subtitle mt-5">
+              Lorem, ipsum dolor.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus tenetur ratione cum corporis est eaque repellat alias
+              velit quae expedita. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Iusto, itaque.
+            </p>
+          </div>
+        </div>
+        <div class="tabs is-centered">
+          <ul>
+            <li>
+              <a href="contacto.html">
+                Contactame
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="section is-medium">
+      <h2 class="title has-text-centered">Producciones</h2>
+      <div class="container box has-background-light">
+        <div class="tile is-parent">
+          <article class="tile is-child box iframe-container">
+            <iframe
+              class="responsive-iframe"
+              src="https://open.spotify.com/embed/track/0vX73QIMQRzhpQRLuXaYnl"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child box iframe-container">
+            <iframe
+              class="responsive-iframe"
+              src="https://open.spotify.com/embed/track/0vX73QIMQRzhpQRLuXaYnl"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child box iframe-container">
+            <iframe
+              class="responsive-iframe"
+              src="https://open.spotify.com/embed/track/0vX73QIMQRzhpQRLuXaYnl"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child box iframe-container">
+            <iframe
+              class="responsive-iframe"
+              src="https://open.spotify.com/embed/track/0vX73QIMQRzhpQRLuXaYnl"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </article>
+        </div>
+        <div class="tabs is-centered">
+          <ul>
+            <li>
+              <a href="producciones.html">
+                Ver mas...
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-light is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <nav class="level">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Producciones</p>
+                <p class="title">20</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Clientes</p>
+                <p class="title">80</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Producciones en Vivo</p>
+                <p class="title">100+</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Likes</p>
+                <p class="title">789</p>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section is-medium">
+      <h2 class="title has-text-centered">Testimonios</h2>
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <article class="media box">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src="https://randomuser.me/api/portraits/women/28.jpg" />
+                </p>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>John Smith</strong> | <small>Banda X</small>
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin ornare magna eros, eu pellentesque tortor vestibulum
+                    ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                    facilisis.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column">
+            <article class="media box">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src="https://randomuser.me/api/portraits/women/82.jpg" />
+                </p>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>John Smith</strong> | <small>Banda X</small>
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin ornare magna eros, eu pellentesque tortor vestibulum
+                    ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                    facilisis.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column">
+            <article class="media box">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src="https://randomuser.me/api/portraits/men/3.jpg" />
+                </p>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>John Smith</strong> | <small>Banda X</small>
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin ornare magna eros, eu pellentesque tortor vestibulum
+                    ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                    facilisis.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <article class="media box">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src="https://randomuser.me/api/portraits/women/28.jpg" />
+                </p>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>John Smith</strong> | <small>Banda X</small>
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin ornare magna eros, eu pellentesque tortor vestibulum
+                    ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                    facilisis.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column">
+            <article class="media box">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src="https://randomuser.me/api/portraits/women/82.jpg" />
+                </p>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>John Smith</strong> | <small>Banda X</small>
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin ornare magna eros, eu pellentesque tortor vestibulum
+                    ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                    facilisis.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column">
+            <article class="media box">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src="https://randomuser.me/api/portraits/men/3.jpg" />
+                </p>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>John Smith</strong> | <small>Banda X</small>
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin ornare magna eros, eu pellentesque tortor vestibulum
+                    ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                    facilisis.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="tabs is-centered">
+          <ul>
+            <li>
+              <a href="contacto.html">
+                Contactame
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer has-background-dark">
+      <div class="container">
+        <div class="content has-text-centered mt-6">
+          <nav class="level">
+            <div class="level-item has-text-centered has-text-grey-lighter">
+              <div>
+                <span class="icon">
+                  <i class="fas fa-mobile-alt mr-1"></i>
+                  +56244445555
+                </span>
+              </div>
+            </div>
+            <div class="level-item has-text-centered has-text-grey-lighter">
+              <div>
+                <span class="icon">
+                  <i class="far fa-envelope mr-1"></i>
+                  origen@gmail.com
+                </span>
+              </div>
+            </div>
+            <div class="level-item has-text-centered has-text-grey-lighter">
+              <div>
+                <span class="icon">
+                  <i class="fab fa-facebook-f"></i>
+                </span>
+                <span class="icon">
+                  <i class="fab fa-instagram"></i>
+                </span>
+              </div>
+            </div>
+          </nav>
+          <p class="mt-6">
+            <img src="./images/jd-dark.png" alt="Juan Díaz" width="50px" />
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll('.navbar-burger'),
+        0
+      );
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener('click', () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+    // When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 500 ||
+        document.documentElement.scrollTop > 500
+      ) {
+        document.getElementById('navbar-solid').style.top = '0';
+      } else {
+        document.getElementById('navbar-solid').style.top = '-55px';
+      }
+    }
+  </script>
+</html>
